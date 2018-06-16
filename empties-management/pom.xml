@@ -3,5 +3,9 @@
   <groupId>Empties_Management</groupId>
   <artifactId>empties-management</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <description>This program manages the deposit system for "Napf" crates.</description>
+  <modules>
+  	<module>emptiesManagement.surface</module>
+  </modules>
 </project>
