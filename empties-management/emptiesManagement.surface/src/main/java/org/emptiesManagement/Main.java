@@ -29,8 +29,8 @@ public class Main {
 	private void createMainFrame() {
 
 		final String frameTitle = "Pfandverwaltung";
-		final int width = 700;
-		final int height = 500;
+		final int width = 600;
+		final int height = 400;
 
 		MainFrame mainFrame = new MainFrame(frameTitle, width, height);
 		mainFrame.setVisible(true);
