@@ -22,7 +22,7 @@ public class MainFrame extends JFrame {
 
 	private JPanel contentPane;
 	private ButtonsPanel buttonsPanel;
-//	private ControlsPanel controlsPanel;
+	// private ControlsPanel controlsPanel;
 
 	/**
 	 * Sets JFrame options of the MainFrame object like title, size of the frame,
@@ -42,23 +42,11 @@ public class MainFrame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		
+
 		this.createContentPane();
+		this.createButtonsPanel();
 		this.addMenuBar();
 
-//		this.createTopSpacePanel();
-		this.createButtonsPanel();
-//		this.createControlsPanel();
-//		this.createBottomSpacePanel();
-
-	}
-	
-	/**
-	 * Creates a new JMenuBar and adds it to mainFrame.
-	 */
-	private void addMenuBar() {
-		MenuBar menuBar = new MenuBar();
-		this.setJMenuBar(menuBar);
 	}
 
 	/**
@@ -77,17 +65,17 @@ public class MainFrame extends JFrame {
 
 	}
 
-//	/**
-//	 * Creates a new panel that creates space to the top of the frame.
-//	 */
-//	private void createTopSpacePanel() {
-//		JPanel upperSpace = new JPanel();
-//		GridBagConstraints gbcUpperSpace = new GBCBuilder()//
-//				.anchor(GridBagConstraints.WEST).fill(GridBagConstraints.BOTH).build();
-//
-//		this.contentPane.add(upperSpace, gbcUpperSpace);
-//	}
-	
+	// /**
+	// * Creates a new panel that creates space to the top of the frame.
+	// */
+	// private void createTopSpacePanel() {
+	// JPanel upperSpace = new JPanel();
+	// GridBagConstraints gbcUpperSpace = new GBCBuilder()//
+	// .anchor(GridBagConstraints.WEST).fill(GridBagConstraints.BOTH).build();
+	//
+	// this.contentPane.add(upperSpace, gbcUpperSpace);
+	// }
+
 	/**
 	 * Create a new {@link ButtonsPanel} where the buttons are located.
 	 */
@@ -97,27 +85,35 @@ public class MainFrame extends JFrame {
 				.fill(GridBagConstraints.BOTH).gridy(1).build();
 		this.contentPane.add(this.buttonsPanel, gbcImagesPanel);
 	}
-	
-//	/**
-//	 * Create a new {@link ControlsPanel} where the controls elements are located.
-//	 */
-//	private void createControlsPanel() {
-//		this.controlsPanel = new ControlsPanel();
-//		GridBagConstraints gbcControlsPanel = new GBCBuilder()//
-//				.fill(GridBagConstraints.BOTH).gridy(2).build();
-//		this.contentPane.add(this.controlsPanel, gbcControlsPanel);
-//
-//	}
-	
-//	/**
-//	 * Creates a new panel that creates space to the bottom of the frame.
-//	 */
-//	private void createBottomSpacePanel() {
-//		JPanel lowerSpace = new JPanel();
-//		GridBagConstraints gbcUpperSpace = new GBCBuilder()//
-//				.fill(GridBagConstraints.BOTH).gridy(3).build();
-//		this.contentPane.add(lowerSpace, gbcUpperSpace);
-//
-//	}
+
+	/**
+	 * Creates a new JMenuBar and adds it to mainFrame.
+	 */
+	private void addMenuBar() {
+		MenuBar menuBar = new MenuBar();
+		this.setJMenuBar(menuBar);
+	}
+
+	// /**
+	// * Create a new {@link ControlsPanel} where the controls elements are located.
+	// */
+	// private void createControlsPanel() {
+	// this.controlsPanel = new ControlsPanel();
+	// GridBagConstraints gbcControlsPanel = new GBCBuilder()//
+	// .fill(GridBagConstraints.BOTH).gridy(2).build();
+	// this.contentPane.add(this.controlsPanel, gbcControlsPanel);
+	//
+	// }
+
+	// /**
+	// * Creates a new panel that creates space to the bottom of the frame.
+	// */
+	// private void createBottomSpacePanel() {
+	// JPanel lowerSpace = new JPanel();
+	// GridBagConstraints gbcUpperSpace = new GBCBuilder()//
+	// .fill(GridBagConstraints.BOTH).gridy(3).build();
+	// this.contentPane.add(lowerSpace, gbcUpperSpace);
+	//
+	// }
 
 }
