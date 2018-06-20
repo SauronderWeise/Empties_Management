@@ -1,7 +1,5 @@
 package org.emptiesManagement.gui;
 
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
@@ -10,8 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import org.emptiesManagement.components.ButtonsPanel;
-import org.emptiesManagement.components.ControlsPanel;
 import org.emptiesManagement.gui.util.GBCBuilder;
+import org.emptiesManagement.menu.MenuBar;
 
 /**
  * The main frame of which the empties management program consists.
@@ -24,7 +22,7 @@ public class MainFrame extends JFrame {
 
 	private JPanel contentPane;
 	private ButtonsPanel buttonsPanel;
-	private ControlsPanel controlsPanel;
+//	private ControlsPanel controlsPanel;
 
 	/**
 	 * Sets JFrame options of the MainFrame object like title, size of the frame,
@@ -44,13 +42,20 @@ public class MainFrame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-
+		
 		this.createContentPane();
+		this.addMenuBar();
 
 //		this.createTopSpacePanel();
 		this.createButtonsPanel();
 //		this.createControlsPanel();
 //		this.createBottomSpacePanel();
+
+	}
+
+	private void addMenuBar() {
+		MenuBar menuBar = new MenuBar();
+		this.setJMenuBar(menuBar);
 	}
 
 	/**
@@ -75,7 +80,8 @@ public class MainFrame extends JFrame {
 //	private void createTopSpacePanel() {
 //		JPanel upperSpace = new JPanel();
 //		GridBagConstraints gbcUpperSpace = new GBCBuilder()//
-//				.fill(GridBagConstraints.BOTH).build();
+//				.anchor(GridBagConstraints.WEST).fill(GridBagConstraints.BOTH).build();
+//
 //		this.contentPane.add(upperSpace, gbcUpperSpace);
 //	}
 	
