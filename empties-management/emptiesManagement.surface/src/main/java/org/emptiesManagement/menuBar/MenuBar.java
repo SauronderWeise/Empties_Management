@@ -1,4 +1,4 @@
-package org.emptiesManagement.menu;
+package org.emptiesManagement.menuBar;
 
 import javax.swing.JMenuBar;
 

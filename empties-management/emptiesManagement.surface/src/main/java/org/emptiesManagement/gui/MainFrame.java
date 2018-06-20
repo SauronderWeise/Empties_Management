@@ -9,7 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import org.emptiesManagement.components.ButtonsPanel;
 import org.emptiesManagement.gui.util.GBCBuilder;
-import org.emptiesManagement.menu.MenuBar;
+import org.emptiesManagement.menuBar.MenuBar;
 
 /**
  * The main frame of which the empties management program consists.
@@ -52,7 +52,10 @@ public class MainFrame extends JFrame {
 //		this.createBottomSpacePanel();
 
 	}
-
+	
+	/**
+	 * Creates a new JMenuBar and adds it to mainFrame.
+	 */
 	private void addMenuBar() {
 		MenuBar menuBar = new MenuBar();
 		this.setJMenuBar(menuBar);
