@@ -1,10 +1,10 @@
 package org.emptiesManagement.menuBar;
 
-import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
 import org.emptiesManagement.Iterator.IIterator;
 import org.emptiesManagement.Iterator.MenuNameRepository;
+import org.emptiesManagement.menus.Menu;
 
 /**
  * This class creates the JMenuBar.
@@ -15,8 +15,8 @@ import org.emptiesManagement.Iterator.MenuNameRepository;
 @SuppressWarnings("serial")
 public class MenuBar extends JMenuBar {
 
-	MenuNameRepository menuNamesRepository = new MenuNameRepository();
-	
+	private MenuNameRepository menuNamesRepository = new MenuNameRepository();
+
 	/**
 	 * Creates a new JMenuBar object.
 	 */
@@ -24,18 +24,17 @@ public class MenuBar extends JMenuBar {
 		super();
 		this.fillMenuBar();
 	}
-	
+
 	/**
 	 * Fill the JMenuBar with entries.
 	 */
 	private void fillMenuBar() {
-		
+
 		// go threw loop as long the hasNext() method returns true.
 		for (IIterator iterator = menuNamesRepository.getIterator(); iterator.hasNext();) {
 			String name = (String) iterator.next();
-			this.add(new JMenu(name));
+			Menu menu = new Menu(name);
+			this.add(menu);
 		}
-
 	}
-
 }

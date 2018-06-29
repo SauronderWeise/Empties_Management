@@ -9,40 +9,41 @@ import java.util.List;
  * @author Timm Schneider
  *
  */
-public class MenuNameRepository implements IContainer {
+public class MenuItemNamesRepositoryForFile implements IContainer {
 
 	@Override
 	public IIterator getIterator() {
-		return new MenuNameIterator();
+		return new MenuItemNameIterator();
 	}
 
 	/**
-	 * Class which implements IIterator and provides a List with the menu names.
+	 * Class which implements IIterator and provides a List with the menu item names
+	 * for the file menu.
 	 * 
 	 * @author Timm Schneider
 	 *
 	 */
-	private class MenuNameIterator implements IIterator {
+	private class MenuItemNameIterator implements IIterator {
 
 		private int index;
 		private List<String> names;
 
 		/**
-		 * Creates a new Iterator and fill the menu names list with Strings.
+		 * Creates a new Iterator and fill the menu item names list with Strings.
 		 */
-		private MenuNameIterator() {
+		private MenuItemNameIterator() {
 			fillList();
 		}
 
 		/**
-		 * Fill the menu names list with Strings.
+		 * Fill the menu item names list with Strings.
 		 */
 		private void fillList() {
 			names = new ArrayList<String>();
-			names.add("Datei");
-			names.add("Test");
+			names.add("Speichern");
+			names.add("Speichern als..");
 
-			// add here more menus ..
+			// add here more menu items ..
 
 		}
 
